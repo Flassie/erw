@@ -39,6 +39,7 @@ func NewCodeErr(code string, msg string) error {
 func WithDescription(e error, description string) error {
 	if ce, ok := e.(*CodeError); ok {
 		ce.Description = description
+
 		return ce
 	}
 
